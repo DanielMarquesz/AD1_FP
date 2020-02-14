@@ -26,21 +26,24 @@ for f in range(tamanho):
 '''
 def contaPrimo():
     frase = []
-    frase = [int(i) for i in input().split()] # entrada de valores inteiros
-
-    tamanho = len(frase)
-    primo = False
-    print('Relação de Primo (s) : ')
-    for f in range(tamanho):
-        n = frase[f]
-        if n > 1:
-            primo = True
-            for g in range(2, n):
-                if n % g == 0:
-                    primo = False
-            if primo == True:
-                print(n)
-
+    vazio = []
+    frase = [int(i) for i in input().split()]
+    if vazio == frase: # entrada de valores inteiros
+        print('Nenhum Número Foi Lido!!!')
+    else:
+        tamanho = len(frase)
+        primo = False
+        print('Relação de Primo (s) : ')
+        for f in range(tamanho):
+            n = frase[f]
+            if n > 1:
+                primo = True
+                for g in range(2, n):
+                    if n % g == 0:
+                        primo = False
+                if primo == True:
+                    print(n)
+        print('Fim da Relação.')
 
 contaPrimo()
-print('Fim da Relação.')
+
